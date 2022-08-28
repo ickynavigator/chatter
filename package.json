@@ -10,6 +10,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^5.2.4",
+    "@mantine/hooks": "^5.2.4",
+    "@mantine/next": "^5.2.4",
+    "@mantine/notifications": "^5.2.4",
+    "@mantine/rte": "^5.2.4",
     "firebase": "^9.9.3",
     "next": "12.2.5",
     "react": "18.2.0",
