@@ -27,6 +27,8 @@ module.exports = {
   rules: {
     'no-underscore-dangle': 'off',
     'no-console': ['warn', { allow: ['error'] }],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
     'import/extensions': [
       'error',
       'ignorePackages',
