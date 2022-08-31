@@ -20,6 +20,7 @@
       ">utils/*": ["utils/*"],
       ">hooks/*": ["hooks/*"],
       ">styles/*": ["styles/*"],
+      ">context/*": ["context/*"],
       ">types/*": ["types/*"]
     }
   },
