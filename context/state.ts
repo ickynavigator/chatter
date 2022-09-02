@@ -1,11 +1,11 @@
 import { Chat } from '>types/chat';
 
 export interface AppState {
-  id: string | null;
+  id: string | undefined;
   chats: Chat[];
 }
 
 export const getInitialAppState = (): AppState => ({
-  id: null,
+  id: undefined,
   chats: [],
 });

@@ -8,6 +8,11 @@ const reducer = (state: AppState, { type, payload }: Actions) => {
         ...state,
         id: payload.id,
       };
+    case Types.SET_CHATS:
+      return {
+        ...state,
+        chats: payload.chats,
+      };
     default:
       return state;
   }
