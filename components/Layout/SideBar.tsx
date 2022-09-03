@@ -1,3 +1,4 @@
+import ChatButton from '>components/ChatButton';
 import { AppState } from '>context/state';
 import useRefreshChats from '>hooks/useRefreshChats';
 
@@ -8,7 +9,19 @@ interface ISideBar {
 const SideBar: React.FC<ISideBar> = ({ chats, id }) => {
   useRefreshChats({ id });
 
-  return <div>{chats && chats.length > 0 ? chats.length : <>No Chats</>}</div>;
+  if (chats.length <= 0) {
+    return <div>No chats</div>;
+  }
+
+  return (
+    <>
+      {chats.map(chat => {
+        const { id: idx } = chat;
+
+        return <ChatButton key={idx} label={idx} />;
+      })}
+    </>
+  );
 };
 
 export default SideBar;
