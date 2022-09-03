@@ -1,6 +1,11 @@
-export interface Chat {
+import Message from './message';
+import User from './user';
+
+interface Chat {
   id: string;
-  message: string;
-  recieverID: string;
-  senderID: string;
+
+  members: User['id'][];
+  message: Message[];
 }
+
+export default Chat;
