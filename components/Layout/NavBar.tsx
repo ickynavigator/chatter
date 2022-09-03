@@ -10,12 +10,12 @@ const NavBar: React.FC = () => {
   const { chats, id } = state;
 
   return (
-    <Navbar p="xs" width={{ base: 300 }}>
+    <Navbar p="xs" width={{ base: 350 }}>
       <Navbar.Section mt="xs">
         <Header />
       </Navbar.Section>
 
-      <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
+      <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs" mt="xs">
         {id ? <SideBar chats={chats} id={id} /> : <>Log in</>}
       </Navbar.Section>
 
