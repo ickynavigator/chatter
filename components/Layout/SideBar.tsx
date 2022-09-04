@@ -18,7 +18,7 @@ const SideBar: React.FC<ISideBar> = ({ chats, id }) => {
       {chats.map(chat => {
         const { id: idx } = chat;
 
-        return <ChatButton key={idx} label={idx} />;
+        return <ChatButton key={idx} label={idx} id={idx} />;
       })}
     </>
   );
