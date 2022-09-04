@@ -1,12 +1,16 @@
 import Bubble from '>components/Bubble';
 import useRefreshSpecificChat from '>hooks/useRefreshSpecificChat';
+import { addChat } from '>utils/dbTools';
 import { Box, Button, Group, Loader, Stack, TextInput } from '@mantine/core';
 import withLoggedin from 'HOC/withLoggedin';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Send } from 'tabler-icons-react';
 
-const Index = () => {
+interface I {
+  id: string;
+}
+const Index: React.FC<I> = ({ id: senderID }) => {
   const router = useRouter();
   const { id } = router.query;
   const { values, loading, error } = useRefreshSpecificChat({
@@ -16,6 +20,13 @@ const Index = () => {
   const [value, setValue] = useState('');
   const onSendHandler = () => {
     if (value.length <= 0) return;
+    if (typeof id !== 'string') return;
+
+    addChat({
+      id,
+      message: value,
+      senderID,
+    });
 
     setValue('');
   };
