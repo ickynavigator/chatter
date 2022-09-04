@@ -1,4 +1,4 @@
-import { Chat } from '>types/chat';
+import Chat from '>types/chat';
 import { Actions, Types } from './actions';
 
 export function SetID(id: string): Actions {

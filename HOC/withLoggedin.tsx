@@ -12,7 +12,7 @@ const withLoggedin = <T,>(Component: ComponentType<T>) => {
       return <Unauthorized />;
     }
 
-    return <Component {...props} />;
+    return <Component {...(props as any)} />;
   };
 };
 

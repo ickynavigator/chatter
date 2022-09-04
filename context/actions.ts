@@ -1,4 +1,4 @@
-import { Chat } from '>types/chat';
+import Chat from '>types/chat';
 import { ActionMap } from '>types/index';
 
 export enum Types {
