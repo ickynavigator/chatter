@@ -5,7 +5,7 @@ interface Chat {
   id: string;
 
   members: User['id'][];
-  message: Message[];
+  messages: Message[];
 }
 
 export default Chat;

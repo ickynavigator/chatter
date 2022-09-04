@@ -1,4 +1,4 @@
-import { Chat } from '>types/chat';
+import Chat from '>types/chat';
 
 export interface AppState {
   id: string | undefined;
