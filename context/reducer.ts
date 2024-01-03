@@ -3,6 +3,11 @@ import { AppState } from './state';
 
 const reducer = (state: AppState, { type, payload }: Actions) => {
   switch (type) {
+    case Types.SET_STORE:
+      return {
+        ...state,
+        ...payload.store,
+      };
     case Types.SET_ID:
       return {
         ...state,
